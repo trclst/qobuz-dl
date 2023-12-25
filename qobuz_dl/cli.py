@@ -29,7 +29,7 @@ QOBUZ_DB = os.path.join(CONFIG_PATH, "qobuz_dl.db")
 def _reset_config(config_file):
     logging.info(f"{YELLOW}Creating config file: {config_file}")
     config = configparser.ConfigParser()
-    config["DEFAULT"]["email"] = input("Enter your email:\n- ")
+    config["DEFAULT"]["email"] = input("TEST: Enter your email:\n- ")
     password = input("Enter your password\n- ")
     config["DEFAULT"]["password"] = hashlib.md5(password.encode("utf-8")).hexdigest()
     config["DEFAULT"]["default_folder"] = (
